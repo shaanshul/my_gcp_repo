@@ -1,12 +1,12 @@
 org_id  = ""
 
 ######## Group details ########
-org_admin_group = "group:gcp-organization-admins@queensview.joonix.net" 
-billing_admin_group = "group:gcp-billing-admins@queensview.joonix.net"
-network_admin_group = "group:gcp-network-admins@queensview.joonix.net"
-logging_admin_group = "group:gcp-logging-admins@queensview.joonix.net"
-monitoring_admin_group = "group:gcp-monitoring-admins@queensview.joonix.net"
-security_admin_group = "group:gcp-security-admins@queensview.joonix.net"
+org_admin_group = ["group:gcp-organization-admins@queensview.joonix.net"] 
+billing_admin_group = ["group:gcp-billing-admins@queensview.joonix.net"]
+network_admin_group = ["group:gcp-network-admins@queensview.joonix.net"]
+logging_admin_group = ["group:gcp-logging-admins@queensview.joonix.net"]
+monitoring_admin_group = ["group:gcp-monitoring-admins@queensview.joonix.net"]
+security_admin_group = ["group:gcp-security-admins@queensview.joonix.net"]
 
 ######## Roles to assign in groups ##########
 org_admin_group_roles = ["roles/resourcemanager.organizationAdmin", "roles/resourcemanager.folderAdmin", "roles/resourcemanager.projectCreator", "roles/billing.user", "roles/iam.organizationRoleAdmin", "roles/orgpolicy.policyAdmin", "roles/securitycenter.admin", "roles/cloudsupport.admin"]
