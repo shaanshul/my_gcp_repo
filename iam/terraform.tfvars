@@ -1,0 +1,7 @@
+organization    = ""
+org_admin_group = "group:gcp-organization-admins@queensview.joonix.net" 
+org_admin_group = "group:gcp-billing-admins@queensview.joonix.net"
+org_admin_group = "group:gcp-network-admins@queensview.joonix.net"
+org_admin_group = "group:gcp-logging-admins@queensview.joonix.net"
+org_admin_group = "group:gcp-monitoring-admins@queensview.joonix.net"
+org_admin_group = "group:gcp-security-admins@queensview.joonix.net"
