@@ -161,47 +161,47 @@
 #   project = my_project_id
 # }
 
-resource "google_organization_iam_binding" "org_admin_role" {
-  org_id  = var.org_id
-  for_each = var.org_admin_group_roles
-  role     = each.value
-  members  = local.group1
-}
+# resource "google_organization_iam_binding" "org_admin_role" {
+#   org_id  = var.org_id
+#   for_each = var.org_admin_group_roles
+#   role     = each.value
+#   members  = local.group1
+# }
 
-resource "google_organization_iam_binding" "billing_admin_role" {
-  org_id  = var.org_id
-  for_each = var.billing_admin_group_roles
-  role     = each.value
-  members  = local.group2
-}
+# resource "google_organization_iam_binding" "billing_admin_role" {
+#   org_id  = var.org_id
+#   for_each = var.billing_admin_group_roles
+#   role     = each.value
+#   members  = local.group2
+# }
 
-resource "google_organization_iam_binding" "network_admin_role" {
-  org_id  = var.org_id
-  for_each = var.network_admin_group_roles
-  role     = each.value
-  members  = local.group3
-}
+# resource "google_organization_iam_binding" "network_admin_role" {
+#   org_id  = var.org_id
+#   for_each = var.network_admin_group_roles
+#   role     = each.value
+#   members  = local.group3
+# }
 
-resource "google_organization_iam_binding" "logging_admin_role" {
-  org_id  = var.org_id
-  for_each = var.logging_admin_group_roles
-  role     = each.value
-  members  = local.group4
-}
+# resource "google_organization_iam_binding" "logging_admin_role" {
+#   org_id  = var.org_id
+#   for_each = var.logging_admin_group_roles
+#   role     = each.value
+#   members  = local.group4
+# }
 
-resource "google_organization_iam_binding" "monitoring_admin_role" {
-  org_id  = var.org_id
-  for_each = var.monitoring_admin_group_roles
-  role     = each.value
-  members  = local.group5
-}
+# resource "google_organization_iam_binding" "monitoring_admin_role" {
+#   org_id  = var.org_id
+#   for_each = var.monitoring_admin_group_roles
+#   role     = each.value
+#   members  = local.group5
+# }
 
-resource "google_organization_iam_binding" "security_admin_role" {
-  org_id  = var.org_id
-  for_each = var.security_admin_group_roles
-  role     = each.value
-  members  = local.group6
-}
+# resource "google_organization_iam_binding" "security_admin_role" {
+#   org_id  = var.org_id
+#   for_each = var.security_admin_group_roles
+#   role     = each.value
+#   members  = local.group6
+# }
 
 ######  testing
 
@@ -210,4 +210,11 @@ resource "google_organization_iam_binding" "security11_admin_role" {
   for_each = var.security_admin_group_roles
   role     = each.value
   members  = var.emails.email1
+}
+
+resource "google_organization_iam_binding" "test_admin_role" {
+  org_id  = var.org_id
+  for_each = var.security_admin_group_roles
+  role     = each.value
+  members  = var.emails.email2
 }

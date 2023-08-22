@@ -18,5 +18,6 @@ security_admin_group_roles = ["roles/orgpolicy.policyAdmin", "roles/iam.security
 
 
 emails = {
-  "email1" = [ "group:anshul-group@gmail.com" ]
+  "email1" = ["group:anshul-group@gmail.com"],
+  "email2" = ["group:test-group@gmail.com"]
 }
