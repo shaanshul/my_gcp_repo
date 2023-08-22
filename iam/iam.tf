@@ -1,14 +1,4 @@
 ########## To assign organisation role to iam member or vice versa ###########
-########## To assign organisation role to iam member or vice versa ###########
-locals {
-  group1 = var.org_admin_group
-  group2 = var.billing_admin_group
-  group3 = var.network_admin_group
-  group4 = var.logging_admin_group
-  group5 = var.monitoring_admin_group
-  group6 = var.security_admin_group
-}
-
 ####### Organization admin group role binding ########
 
 # module "organization-iam-bindings" {
@@ -211,4 +201,13 @@ resource "google_organization_iam_binding" "security_admin_role" {
   for_each = var.security_admin_group_roles
   role     = each.value
   members  = local.group6
+}
+
+######  testing
+
+resource "google_organization_iam_binding" "security11_admin_role" {
+  org_id  = var.org_id
+  for_each = var.security_admin_group_roles
+  role     = each.value
+  members  = var.emails.email1
 }

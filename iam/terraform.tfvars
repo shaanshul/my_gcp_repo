@@ -15,3 +15,8 @@ network_admin_group_roles = ["roles/compute.networkAdmin", "roles/compute.xpnAdm
 logging_admin_group_roles = ["roles/logging.admin"]
 monitoring_admin_group_roles = ["roles/monitoring.admin"]
 security_admin_group_roles = ["roles/orgpolicy.policyAdmin", "roles/iam.securityReviewer", "roles/iam.organizationRoleViewer", "roles/securitycenter.admin", "roles/resourcemanager.folderIamAdmin", "roles/logging.privateLogViewer", "roles/logging.configWriter", "roles/container.viewer", "roles/compute.viewer"]
+
+
+emails = {
+  "email1" = [ "group:anshul-group@gmail.com" ]
+}

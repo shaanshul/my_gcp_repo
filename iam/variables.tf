@@ -67,9 +67,7 @@ variable "security_admin_group_roles" {
   description = "list of roles to assign in Group"
 }
 
-# variable "emails" {
-#   type = map(object({
-#     email1 = "anshul@gmail.com",
-#     email2 = "test@gmail.com" 
-#   }))
-# }
+variable "emails" {
+  type = map(list(string))
+  default = {}
+}
