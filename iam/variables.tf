@@ -1,7 +1,9 @@
-variable "organization" {
-  type = list(string)
+variable "org_id" {
+  type = string
   description = "ID of an organization"
 }
+
+######### Group details #########
 
 variable "org_admin_group" {
   type = string
@@ -32,3 +34,42 @@ variable "security_admin_group" {
   type = string
   description = "Name of Security admin group"
 }
+
+######### Roles to assign in Groups ##########
+
+variable "org_admin_group_roles" {
+  type = set(string)
+  description = "list of roles to assign in Group"
+}
+
+variable "billing_admin_group_roles" {
+  type = set(string)
+  description = "list of roles to assign in Group"
+}
+
+variable "network_admin_group_roles" {
+  type = set(string)
+  description = "list of roles to assign in Group"
+}
+
+variable "logging_admin_group_roles" {
+  type = set(string)
+  description = "list of roles to assign in Group"
+}
+
+variable "monitoring_admin_group_roles" {
+  type = set(string)
+  description = "list of roles to assign in Group"
+}
+
+variable "security_admin_group_roles" {
+  type = set(string)
+  description = "list of roles to assign in Group"
+}
+
+# variable "emails" {
+#   type = map(object({
+#     email1 = "anshul@gmail.com",
+#     email2 = "test@gmail.com" 
+#   }))
+# }
